@@ -1,6 +1,11 @@
+import logoImage from './AnimeHub-LogoText.png';
+
 const topHeader = (<div className="top-header">
     <div className="header-logo">
-        <img src="AnimeHub-LogoText.png" alt="AnimeHub Logo"/>
+        <picture>
+            <source srcSet={logoImage} type="image/webp"/>
+            <img src={logoImage} alt="AnimeHub Logo" width="100px" height="100px"/>
+        </picture>
     </div>
     <div className="header-title">
         <h1>AnimeHub</h1>
@@ -12,7 +17,6 @@ const topHeader = (<div className="top-header">
         <a href = "#about">Community</a>
         <a href = "#contact">Contact</a>
     </div>
-    <div className="header-search">
-        <input type="text" placeholder="Search"/>
-    </div>
 </div>);
+
+export default topHeader;

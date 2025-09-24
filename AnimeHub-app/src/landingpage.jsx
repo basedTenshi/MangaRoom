@@ -1,7 +1,4 @@
-import topHeader from './header.jsx';
-
-const landingPageHeader = topHeader;
-const landingPageText =
+ const landingPage =
     (<div className="header-text">
     <h3>
         Welcome to AnimeHub, the ultimate destination for anime lovers!
@@ -13,4 +10,10 @@ const landingPageText =
         Our platform features a user-rating system so you can share your opinions and a vibrant discussion board to
         connect with a passionate community of fans.
     </h3>
+    <div className="header-buttons">
+        <div className="SignUpButton">Sign Up</div>
+        <div className="LogInButton">Log In</div>
+    </div>
 </div>);
+
+export default landingPage;

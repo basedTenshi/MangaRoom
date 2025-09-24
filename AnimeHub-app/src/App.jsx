@@ -1,7 +1,11 @@
+import topHeader from "./header.jsx";
+import landingPage from "./landingpage.jsx";
+
 function App() {
     return (
         <div className="App">
-            <h1>Hello World!</h1>
+            {topHeader}
+            {landingPage}
         </div>
     );
 }
