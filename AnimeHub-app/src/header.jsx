@@ -12,11 +12,21 @@ const topHeader = (<div className="top-header">
     </div>
     <div className="header-navigation">
         <a href = "#home">Home</a>
-        <a href = "#ongoing">Ongoing</a>
-        <a href = "#upcoming">Upcoming</a>
-        <a href = "#about">Community</a>
-        <a href = "#contact">Contact</a>
+        <a href = "#ongoing">On-air</a>
+        <a href = "#upcoming">Genres</a>
+        <a href = "#about">Discussions</a>
+        <a href = "#contact">Reviews</a>
     </div>
+    <div className="header-search">
+        <p>Search</p>
+    </div>
+    <div className="header-login">
+        <p>Login</p>
+    </div>
+    <div className="header-register">
+        <p>Register</p>
+    </div>
+
 </div>);
 
 export default topHeader;

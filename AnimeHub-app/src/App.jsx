@@ -1,11 +1,9 @@
-import topHeader from "./header.jsx";
-import landingPage from "./landingpage.jsx";
+import home from "./home.jsx";
 
 function App() {
     return (
         <div className="App">
-            {topHeader}
-            {landingPage}
+            {home}
         </div>
     );
 }
