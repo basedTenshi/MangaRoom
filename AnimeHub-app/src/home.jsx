@@ -1,13 +1,9 @@
 import topHeader from "./header.jsx";
 
 const home =
-    (<div className="home-header">
-     {topHeader}
-    <div className="home-content">
-        <div className="home-search">
-            <input type="text" placeholder="Search"/>
-        </div>
-        <div className="home-content-top-text">
+    (<div id="home-content"  className="text-white h-full w-full">
+        {topHeader}
+        <div id="home-content-top-text" className="flex flex-col m-10 gap-y-10 border-2 border-white">
             <h3>
                 Welcome to AnimeHub, the ultimate destination for anime lovers!
                 <br/>
@@ -18,84 +14,92 @@ const home =
                 Our platform features a user-rating system so you can share your opinions and a vibrant discussion board to
                 connect with a passionate community of fans.
             </h3>
-            <div className="home-content-top-buttons">
+            <div className="home-content-top-buttons flex border-2 border-white">
                 <h3>Watch Now</h3>
                 <h3>Learn More</h3>
             </div>
         </div>
-        <div className="home-content-middle-text">
-            <div className="home-content-middle-text-separator">
+        <div id="home-content-middle-text">
+            <div id="home-content-middle-text-separator" className="flex border-2 border-white">
                 <h2>Currently On-Air</h2>
             </div>
-            <div className="home-content-middle-text-animes">
-                <div className="home-content-middle-text-anime-box-one">
+            <div id="home-content-middle-text-animes" className="flex">
+                <div id="home-content-middle-text-anime-box-one">
                     <h3>Anime Name</h3>
                     <h3>Episode</h3>
                     <h3>Rating</h3>
                 </div>
-                <div className="home-content-middle-text-anime-box-two">
+                <div id="home-content-middle-text-anime-box-two">
                     <h3>Anime Name</h3>
                     <h3>Episode</h3>
                     <h3>Rating</h3>
                 </div>
-                <div className="home-content-middle-text-anime-box-three">
+                <div id="home-content-middle-text-anime-box-three">
                     <h3>Anime Name</h3>
                     <h3>Episode</h3>
                     <h3>Rating</h3>
                 </div>
             </div>
-            <div className="home-content-middle-text-browse-genre">
-                <div className="home-content-middle-text-browse-action-genre">
+            <div id="home-content-middle-text-separator-browse-genre" className="flex border-5 border-black">
+                <h2>Browse by Genre</h2>
+            </div>
+            <div id="home-content-middle-text-browse-genre" className="flex">
+                <div id="home-content-middle-text-browse-action-genre">
                     <h3>Action</h3>
                 </div>
-                <div className="home-content-middle-text-browse-romance-genre">
+                <div id="home-content-middle-text-browse-romance-genre">
                     <h3>Romance</h3>
                 </div>
-                <div className="home-content-middle-text-browse-comedy-genre">
+                <div id="home-content-middle-text-browse-comedy-genre">
                     <h3>Comedy</h3>
                 </div>
-                <div className="home-content-middle-text-browse-adventure-genre">
+                <div id="home-content-middle-text-browse-adventure-genre">
                     <h3>Adventure</h3>
                 </div>
             </div>
-            <div className="home-content-middle-text-recent-discussions">
-                <div className="home-content-middle-text-recent-discussion-box-one">
+            <div id="home-content-middle-text-separator-recent-discussions" className="flex border-5 border-black">
+                <h2>Recent Discussions</h2>
+            </div>
+            <div id="home-content-middle-text-recent-discussions" className="flex">
+                <div id="home-content-middle-text-recent-discussion-box-one">
                     <h3>Blahblah</h3>
                 </div>
-                <div className="home-content-middle-text-recent-discussion-box-two">
+                <div id="home-content-middle-text-recent-discussion-box-two">
                     <h3>Blahblah</h3>
                 </div>
             </div>
-            <div className="home-content-middle-text-recent-reviews">
-                <div className="home-content-middle-text-recent-review-box-one">
+            <div id="home-content-middle-text-separator-recent-reviews" className="flex border-5 border-black">
+                <h2>Recent Reviews</h2>
+            </div>
+            <div id="home-content-middle-text-recent-reviews flex" className="flex">
+                <div id="home-content-middle-text-recent-review-box-one">
                     <h3>Blahblah</h3>
                 </div>
-                <div className="home-content-middle-text-recent-review-box-two">
+                <div id="home-content-middle-text-recent-review-box-two">
                     <h3>Blahblah</h3>
                 </div>
-                <div className="home-content-middle-text-recent-review-box-three">
+                <div id="home-content-middle-text-recent-review-box-three">
                     <h3>Blahblah</h3>
                 </div>
             </div>
-            <div className="home-content-footer">
-                <div className="home-content-footer-website-title">
+            <div id="home-content-footer">
+                <div id="home-content-footer-website-title">
                     <h3>AnimeHub</h3>
                 </div>
-                <div className="home-content-footer-links">
+                <div id="home-content-footer-links">
                     <h3>About Us</h3>
                     <h3>Contact</h3>
                     <h3>Privacy Policy</h3>
                     <h3>Terms of Service</h3>
                 </div>
-                <div className="home-content-footer-social-media">
+                <div id="home-content-footer-social-media">
                     <h3>insert logos and href here</h3>
                 </div>
             </div>
-            <div className="home-content-footer-copyright">
+            <div id="home-content-footer-copyright">
                 <h4>© 2025 AnimeHub. All rights reserved.</h4>
             </div>
         </div>
-    </div>
-</div>);
+    </div>);
 
 export default home;
