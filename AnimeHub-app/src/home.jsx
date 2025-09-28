@@ -1,11 +1,14 @@
 import topHeader from "./header.jsx";
+import topTextBG from "./TopText-BG.png";
 
 const home =
-    (<div id="home-content"  className="text-white h-full w-full">
+    (<div id="home-content"  className="text-white h-full w-full bg-[url('./TopText-BG.png')] bg-cover">
         {topHeader}
-        <div id="home-content-top-text" className="flex flex-col m-10 gap-y-10 border-2 border-white">
-            <h3>
+        <div id="home-content-top-text" className="flex flex-col m-5 border-2 rounded-r-md rounded-l-md uppercase bg-linear-to-t from-sky-500 to-indigo-500">
+            <h3 className="text-3xl m-0">
                 Welcome to AnimeHub, the ultimate destination for anime lovers!
+            </h3>
+            <h3>
                 <br/>
                 <br/>
                 Discover the latest ongoing series and find out where to watch them for free.
@@ -40,7 +43,7 @@ const home =
                     <h3>Rating</h3>
                 </div>
             </div>
-            <div id="home-content-middle-text-separator-browse-genre" className="flex border-5 border-black">
+            <div id="home-content-middle-text-separator-browse-genre" className="flex border-2 border-white">
                 <h2>Browse by Genre</h2>
             </div>
             <div id="home-content-middle-text-browse-genre" className="flex">
@@ -57,7 +60,7 @@ const home =
                     <h3>Adventure</h3>
                 </div>
             </div>
-            <div id="home-content-middle-text-separator-recent-discussions" className="flex border-5 border-black">
+            <div id="home-content-middle-text-separator-recent-discussions" className="flex border-2 border-white">
                 <h2>Recent Discussions</h2>
             </div>
             <div id="home-content-middle-text-recent-discussions" className="flex">
@@ -68,7 +71,7 @@ const home =
                     <h3>Blahblah</h3>
                 </div>
             </div>
-            <div id="home-content-middle-text-separator-recent-reviews" className="flex border-5 border-black">
+            <div id="home-content-middle-text-separator-recent-reviews" className="flex border-2 border-white">
                 <h2>Recent Reviews</h2>
             </div>
             <div id="home-content-middle-text-recent-reviews flex" className="flex">
@@ -82,7 +85,7 @@ const home =
                     <h3>Blahblah</h3>
                 </div>
             </div>
-            <div id="home-content-footer">
+            <div id="home-content-footer" className="flex border-2 border-white">
                 <div id="home-content-footer-website-title">
                     <h3>AnimeHub</h3>
                 </div>
