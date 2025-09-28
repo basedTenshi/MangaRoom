@@ -1,7 +1,7 @@
 import logoImage from './AnimeHub-LogoText.png';
 
 const topHeader = (
-    <div className="flex">
+    <div className="flex sticky top-0 bg-[#12131F]">
         <div className="flex flex-row p-3">
             <picture>
                 <source srcSet={logoImage} type="image/webp" />

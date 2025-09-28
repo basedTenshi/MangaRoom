@@ -2,22 +2,18 @@ import topHeader from "./header.jsx";
 import topTextBG from "./TopText-BG.png";
 
 const home =
-    (<div id="home-content"  className="text-white h-full w-full bg-[url('./TopText-BG.png')] bg-cover">
+    (<div id="home-content"  className="text-white h-full w-full bg-cover">
         {topHeader}
-        <div id="home-content-top-text" className="flex flex-col m-5 border-2 rounded-r-md rounded-l-md uppercase bg-linear-to-t from-sky-500 to-indigo-500">
-            <h3 className="text-3xl m-0">
-                Welcome to AnimeHub, the ultimate destination for anime lovers!
+        <div id="home-content-top-text" className="flex flex-col m-5 border-2 rounded-r-md rounded-l-md bg-linear-to-t from-sky-500 to-indigo-500">
+            <h3 className="text-[50px] mb-5 mt-5 ml-15 font-bold">
+                Welcome to AnimeHub!
             </h3>
-            <h3>
-                <br/>
-                <br/>
+            <h3 className="inline-flex border-2 m-3 text-m mr-auto text-2xl text-[20px]">
                 Discover the latest ongoing series and find out where to watch them for free.
-                <br/>
-                <br/>
                 Our platform features a user-rating system so you can share your opinions and a vibrant discussion board to
                 connect with a passionate community of fans.
             </h3>
-            <div className="home-content-top-buttons flex border-2 border-white">
+            <div className="home-content-top-buttons flex border-2 mb-20 border-white">
                 <h3>Watch Now</h3>
                 <h3>Learn More</h3>
             </div>
@@ -102,6 +98,48 @@ const home =
             <div id="home-content-footer-copyright">
                 <h4>© 2025 AnimeHub. All rights reserved.</h4>
             </div>
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
+        </div>
+        <div>
+            asdsafasfsafsafafasfsf
         </div>
     </div>);
 
