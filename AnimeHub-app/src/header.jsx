@@ -1,4 +1,6 @@
 import logoImage from './AnimeHub-LogoText.png';
+import { PlayCircleIcon, HomeIcon, TvIcon, TagIcon, ChatBubbleLeftRightIcon, StarIcon, MagnifyingGlassIcon, UserIcon } from '@heroicons/react/24/outline';
+
 
 const topHeader = (
     <div className="flex sticky top-0 bg-[#12131F]">
@@ -9,15 +11,33 @@ const topHeader = (
             </picture>
         </div>
         <div className="flex flex-row uppercase font-medium">
-            <a href="#home" className="p-5">Home</a>
-            <a href="#ongoing" className="p-5">On-air</a>
-            <a href="#upcoming" className="p-5">Genres</a>
-            <a href="#about" className="p-5">Discussions</a>
-            <a href="#contact" className="p-5">Reviews</a>
+            <a href="./home.jsx" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
+                <HomeIcon className="h-5 w-5" />
+                Home
+            </a>
+
+            <a href="./on_air.jsx" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
+                <TvIcon className="h-5 w-5" />
+                On-air
+            </a>
+            <a href="#upcoming" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
+                <TagIcon className="h-5 w-5" />
+                Genres
+            </a>
+
+            <a href="#about" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
+                <ChatBubbleLeftRightIcon className="h-5 w-5" />
+                Discussions
+            </a>
+
+            <a href="#contact" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
+                <StarIcon className="h-5 w-5" />
+                Reviews
+            </a>
         </div>
     <div className="flex flex-row ml-auto uppercase font-medium">
-        <h3 className="p-5 ml-2 border rounded-lg">Search</h3>
-        <h3 className="p-5 ml-3 border rounded-lg ">Login</h3>
+        <h3 className="p-5 rounded-lg">Search</h3>
+        <h3 className="p-5 rounded-lg ">Login</h3>
     </div>
     </div>
 );
