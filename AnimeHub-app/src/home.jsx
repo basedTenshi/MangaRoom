@@ -23,17 +23,18 @@ const home =
     (<div id="home-content"  className="text-white h-full w-full bg-cover">
         {topHeader}
         <div id="home-content-top-text" className="flex flex-col rounded-r-md m-5 pl-5 pr-5 rounded-l-md bg-linear-to-t from-sky-500 to-indigo-500">
-            <h3 className="text-[50px] mt-5 ml-7 font-bold">
+            <h3 className="text-[55px] mt-5 ml-7 font-bold">
                 Welcome to AnimeHub!
             </h3>
-            <div className="p-5 border-2 rounded-lg shadow-md ml-auto ">
-            </div>
-            <h3 className="inline-flex mb-3 mr-155 text-m text-2xl text-[20px] font-mono">
-                Discover the latest ongoing series and find out where to watch them for free.
+            <div className="flex mb-3">
+                <h3 className="mr-199 text-m text-[20px] text-justify ml-8">Discover the latest ongoing series and find out where to watch them for free.
                 Our platform features a user-rating system so you can share your opinions and a vibrant discussion board to
-                connect with a passionate community of fans.
-            </h3>
-            <div className="home-content-top-buttons flex mb-14.5 mr-100 font-mono">
+                    connect with a passionate community of fans.</h3>
+                <div className="flex border-2 mr-15 pr-20 pl-20">
+                    <h3>A</h3>
+                </div>
+            </div>
+            <div className="home-content-top-buttons flex mb-14.5 ml-8 font-mono">
                 <div className="flex mr-5">
                     <h3>Watch Now</h3>
                 </div>

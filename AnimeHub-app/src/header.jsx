@@ -35,9 +35,13 @@ const topHeader = (
                 Reviews
             </a>
         </div>
-    <div className="flex flex-row ml-auto uppercase font-medium">
-        <h3 className="p-5 rounded-lg">Search</h3>
-        <h3 className="p-5 rounded-lg ">Login</h3>
+    <div className="inline-flex items-center gap-2 p-3 ml-auto uppercase font-medium">
+        <MagnifyingGlassIcon className="h-5 w-5"/>
+        Search
+    </div>
+    <div className="inline-flex items-center gap-2 p-3 uppercase font-medium">
+        <UserIcon className="h-5 w-5"/>
+        Login
     </div>
     </div>
 );
