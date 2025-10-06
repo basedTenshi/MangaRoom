@@ -22,25 +22,19 @@ import LogoHome from "./AnimeHub-LogoUnused.png";
 const home =
     (<div id="home-content"  className="text-white h-full w-full bg-cover">
         {topHeader}
-        <div id="home-content-top-text" className="flex flex-col rounded-r-md m-5 pl-5 pr-5 rounded-l-md bg-linear-to-t from-sky-500 to-indigo-500">
-            <h3 className="text-[55px] mt-5 ml-7 font-bold">
-                Welcome to AnimeHub!
-            </h3>
-            <div className="flex mb-3">
-                <h3 className="mr-199 text-m text-[20px] text-justify ml-8">Discover the latest ongoing series and find out where to watch them for free.
-                Our platform features a user-rating system so you can share your opinions and a vibrant discussion board to
+        <div className="flex">
+            <div className="flex flex-col m-5 pl-5 pr-25 rounded-l-md rounded-r-md bg-linear-to-t from-sky-500 to-indigo-500">
+                <h3 className="text-6xl mt-5 ml-7 font-bold">Welcome to AnimeHub!</h3>
+                <h3 className="text-3xl mt-5 ml-7">Discover the latest ongoing series and find out where to watch them for free.
+                    Our platform features a user-rating system so you can share your opinions and a vibrant discussion board to
                     connect with a passionate community of fans.</h3>
-                <div className="flex border-2 mr-15 pr-20 pl-20">
-                    <h3>A</h3>
+                <div className="flex text-2xl mt-5 pl-7 font-mono gap-x-5">
+                    <h3 className="border-2 rounded-l-md rounded-r-md">Watch Now</h3>
+                    <h3 className="border-2 rounded-l-md rounded-r-md">Learn More</h3>
                 </div>
             </div>
-            <div className="home-content-top-buttons flex mb-14.5 ml-8 font-mono">
-                <div className="flex mr-5">
-                    <h3>Watch Now</h3>
-                </div>
-                <div className="flex">
-                    <h3>Learn More</h3>
-                </div>
+            <div className="flex flex-col m-5 pl-5 rounded-l-md rounded-r-md bg-linear-to-t from-sky-500 to-indigo-500">
+                <h3 className="m-50"></h3>
             </div>
         </div>
         <div id="home-content-middle-text">
