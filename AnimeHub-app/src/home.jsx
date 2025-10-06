@@ -1,6 +1,9 @@
 import topHeader from "./header.jsx";
 import topTextBG from "./TopText-BG.png";
 import LogoHome from "./AnimeHub-LogoUnused.png";
+import placeHolder1 from "./placeholder1.png";
+import heroplaceHolder1 from "./HeroPicPlaceholder.png";
+import heroplaceHolder2 from "./HeroPlaceHolder2.png";
 
 /**
  * Represents the main home UI component for the AnimeHub platform.
@@ -24,17 +27,24 @@ const home =
         {topHeader}
         <div className="flex">
             <div className="flex flex-col m-5 pl-5 pr-25 rounded-l-md rounded-r-md bg-linear-to-t from-sky-500 to-indigo-500">
-                <h3 className="text-6xl mt-5 ml-7 font-bold">Welcome to AnimeHub!</h3>
-                <h3 className="text-3xl mt-5 ml-7">Discover the latest ongoing series and find out where to watch them for free.
+                <h3 className="text-6xl mb-0 mt-5 ml-7 font-bold">Welcome to AnimeHub!</h3>
+                <h3 className="text-3xl mt-20 ml-7">Discover the latest ongoing series and find out where to watch them for free.
                     Our platform features a user-rating system so you can share your opinions and a vibrant discussion board to
                     connect with a passionate community of fans.</h3>
-                <div className="flex text-2xl mt-5 pl-7 font-mono gap-x-5">
-                    <h3 className="border-2 rounded-l-md rounded-r-md">Watch Now</h3>
-                    <h3 className="border-2 rounded-l-md rounded-r-md">Learn More</h3>
+                <div className="flex mt-25 text-2xl pl-7 font-mono gap-x-5">
+                    <h3 className="border-2 rounded-l-md rounded-r-md p-2 font-bold">Find Sources</h3>
+                    <h3 className="border-2 rounded-l-md rounded-r-md p-2 font-bold">Learn More</h3>
                 </div>
             </div>
-            <div className="flex flex-col m-5 pl-5 rounded-l-md rounded-r-md bg-linear-to-t from-sky-500 to-indigo-500">
-                <h3 className="m-50"></h3>
+            <div className="flex flex-row m-5 pl-5 rounded-l-md rounded-r-md bg-linear-to-t from-sky-500 to-indigo-500">
+                <picture className="p-2">
+                    <source srcSet={heroplaceHolder1} type="image/webp" />
+                    <img src={heroplaceHolder1} alt="AnimeHub Logo" className="w-[1125px] max-w-full h-auto rounded-l-md rounded-r-md"/>
+                </picture>
+                <picture className="p-2">
+                    <source srcSet={heroplaceHolder2} type="image/webp" />
+                    <img src={heroplaceHolder2} alt="AnimeHub Logo" className="w-[1263px] max-w-full h-auto rounded-l-md rounded-r-md"/>
+                </picture>
             </div>
         </div>
         <div id="home-content-middle-text">
@@ -42,10 +52,16 @@ const home =
                 <h2>Currently On-Air</h2>
             </div>
             <div id="home-content-middle-text-animes" className="flex justify-around mb-15 pt-15">
-                <div id="home-content-middle-text-anime-box-one" className="flex flex-col border-2 pb-20 pl-20 pr-20 pt-20 font-mono">
-                    <h3>Anime Name</h3>
-                    <h3>Episode</h3>
-                    <h3>Rating</h3>
+                <div id="home-content-middle-text-anime-box-one" className="flex flex-col gap-y-5 border-2 pb-20 pl-20 pr-20 pt-20 font-mono">
+                    <div className="border-2 items-center">
+                        <picture>
+                            <source srcSet={placeHolder1} type="image/webp" />
+                            <img src={placeHolder1} className="w-1/2" alt="AnimeHub Logo"/>
+                        </picture>
+                    </div>
+                    <div className="border-2 ml-50">
+                        <h3>Episode</h3>
+                    </div>
                 </div>
                 <div id="home-content-middle-text-anime-box-two" className="flex flex-col border-2 pb-20 pl-20 pr-20 pt-20 font-mono">
                     <h3>Anime Name</h3>
