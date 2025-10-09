@@ -2,7 +2,7 @@ import home from "./home.jsx";
 
 function App() {
     return (
-        <div className="App" className="bg-[#12131F]">
+        <div className="App" className="bg-[#111417]">
             {home}
         </div>
     );
