@@ -3,7 +3,7 @@ import { HomeIcon, TvIcon, BookOpenIcon, Cog6ToothIcon, UserIcon } from '@heroic
 
 
 const topHeader = (
-    <header className="flex sticky top-0 bg-[#292F33]">
+    <header className="flex sticky top-0 bg-neutral-800">
 
         <div className="flex flex-row p-3">
 
