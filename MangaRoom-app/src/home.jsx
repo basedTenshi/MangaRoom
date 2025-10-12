@@ -30,26 +30,25 @@ const home =
         </div>
 
         <div className="inline-flex m-5">
-            <div id="ReadingSummaryCardDashboard" className="flex flex-col gap-y-11 rounded-lg border-2 border-gray-500 bg-gray-900 pl-8 pr-8">
+            <div id="ReadingSummaryCardDashboard" className="flex flex-col gap-y-9 rounded-lg border-2 border-gray-500 bg-gray-900 pl-8 pr-20">
                 <div className="inline-flex items-center font-medium text-2xl gap-2 pt-3 ">
                     <ChartBarSquareIcon className="h-5 w-5 text-blue-500"/>
                     Reading Summary
                 </div>
-                <div className="flex flex-row  font-medium text-2xl">
-                    <h4 className="text-neutral-400">Total Manga Tracked:</h4>
-                    <span className="flex ml-auto text-blue-500">195</span>
+                <div className="flex flex-row  font-medium">
+                    <h4 className="text-neutral-400 text-xl">Total Manga Tracked:</h4>
+                    <span className="flex ml-auto text-blue-500 text-2xl">195</span>
                 </div>
-                <div className="flex font-medium text-2xl">
-                    <h4 className="text-neutral-400">Chapters Read (This Week): </h4>
-                    <span className="flex ml-auto pl-5 pr-0 text-blue-500">185</span>
+                <div className="flex font-medium">
+                    <h4 className="text-neutral-400 text-xl">Chapters Read:</h4>
+                    <span className="flex ml-auto pl-5 pr-0 text-blue-500 text-2xl">185</span>
                 </div>
-                <hr className="border-gray-700 p-0">
+                <hr className="border-gray-700 p-0 m-0">
                 </hr>
-                <div className="flex font-medium text-2xl mb-5">
+                <div className="flex font-medium text-1xl pt-0 mb-5">
                     <h4>Current Status: </h4>
-                    <span className="flex ml-auto pl-5 pr-3 mb-5 rounded-2xl text-green-300 bg-green-900">On Target</span>
+                    <span className="flex ml-auto pt-1 pb-1 pl-2 pr-2 mb-2 rounded-2xl text-green-300 bg-green-900">On Target</span>
                 </div>
-
             </div>
 
             <div id="PacePredictorDashboard" className="gap-y-11 rounded-lg border-2 border-gray-500 bg-gray-900 pl-8 ml-35 pr-125 ">
