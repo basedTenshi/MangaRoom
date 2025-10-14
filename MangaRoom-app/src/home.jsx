@@ -23,35 +23,35 @@ const home =
     (<div id="home-content"  className="text-white h-full w-full bg-cover bg-[#111417]">
         {topHeader}
 
-        <div className="flex flex-col m-5 pl-5 pr-25">
+        <div className="flex flex-col m-5 pl-5">
             <div id="HomeTextHeader">
-                <h2 className="font-medium text-4xl">Dashboard</h2>
+                <h2 className="ml-20 font-medium text-4xl">Dashboard</h2>
             </div>
         </div>
-
-        <div className="inline-flex m-5">
-            <div id="ReadingSummaryCardDashboard" className="flex flex-col gap-y-9 rounded-lg border-2 border-gray-500 bg-gray-900 pl-8 pr-20">
-                <div className="inline-flex items-center font-medium text-2xl gap-2 pt-3 ">
+    <div className="flex flex-col mr-15 ml-15">
+        <div className="flex pl-10">
+            <div id="ReadingSummaryCardDashboard" className="flex flex-col rounded-lg border-2 border-gray-500 bg-gray-900 pl-5.5 pr-5.5 ml-6">
+                <div className="inline-flex items-center font-medium text-xl gap-2 pt-3 ">
                     <ChartBarSquareIcon className="h-5 w-5 text-blue-500"/>
                     Reading Summary
                 </div>
-                <div className="flex flex-row  font-medium">
-                    <h4 className="text-neutral-400 text-xl">Total Manga Tracked:</h4>
-                    <span className="flex ml-auto text-blue-500 text-2xl">195</span>
+                <div className="flex flex-row pt-5 pb-2">
+                    <h4 className="text-neutral-400 text-m font-medium">Total Manga Tracked:</h4>
+                    <span className="flex ml-auto pl-5 pr-1 text-blue-500 text-2xl font-bold">195</span>
                 </div>
-                <div className="flex font-medium">
-                    <h4 className="text-neutral-400 text-xl">Chapters Read:</h4>
-                    <span className="flex ml-auto pl-5 pr-0 text-blue-500 text-2xl">185</span>
+                <div className="flex flex-row pt-3 pb-5">
+                    <h4 className="text-neutral-400 text-m font-medium">Chapters Read:</h4>
+                    <span className="flex ml-32 pl-5 pr-1 text-blue-500 text-2xl font-bold">185</span>
                 </div>
-                <hr className="border-gray-700 p-0 m-0">
+                <hr className="border-gray-700 pt-2 pb-1 mr-1 ml-0">
                 </hr>
-                <div className="flex font-medium text-1xl pt-0 mb-5">
-                    <h4>Current Status: </h4>
-                    <span className="flex ml-auto pt-1 pb-1 pl-2 pr-2 mb-2 rounded-2xl text-green-300 bg-green-900">On Target</span>
+                <div className="flex font-medium">
+                    <h4 className="text-sm">Current Status: </h4>
+                    <span className="flex ml-auto pt-1 pb-1 pl-2 pr-2 mb-2 rounded-2xl text-green-300 bg-green-900 text-sm">On Target</span>
                 </div>
             </div>
 
-            <div id="PacePredictorDashboard" className="gap-y-11 rounded-lg border-2 border-gray-500 bg-gray-900 pl-8 ml-35 pr-125 ">
+            <div id="PacePredictorDashboard" className="gap-y-11 border-2 border-gray-500 bg-gray-900 pl-8 ml-5 pr-51">
                 <div className="inline-flex flex-row items-center font-medium text-2xl text-pink-500 gap-2 p-3">
                     <ArrowTrendingUpIcon className="h-5 w-5"/>
                         Pace Predictor Insights
@@ -60,15 +60,15 @@ const home =
                     <h5 className="text-sm text-justify">Based on your average pace of 26 chapters/day, here are your projections:</h5>
                 </div>
                 <div className="inline-flex gap-x-11">
-                    <div className="flex flex-row font-medium text-2xl bg-neutral-800 rounded-lg p-5 mt-15">
+                    <div className="flex flex-row font-medium text-2xl bg-neutral-800 rounded-lg mt-2 mb-2 pr-26 pl-26">
                         <h2>Placeholder</h2>
                     </div>
-                    <div className="flex flex-row font-medium text-2xl bg-neutral-800 rounded-lg p-5 mt-15">
+                    <div className="flex flex-row font-medium text-2xl bg-neutral-800 rounded-lg mt-2 mb-2 pr-26 pl-26">
                         <h2>Placeholder</h2>
                     </div>
                 </div>
-                <div className="flex flex-row font-medium text-2xl mt-15 bg-blue-400 rounded-lg p-5 justify-center">
-                    <h3 className="text-sm ">Optimize your pace</h3>
+                <div className="flex flex-row font-medium text-2xl bg-blue-400 rounded-lg p-5 justify-center mt-3 mb-5">
+                    <h3 className="text-sm">Optimize your pace</h3>
                 </div>
 
             </div>
@@ -77,28 +77,22 @@ const home =
 
         <div id="home-content-middle-text" className="flex flex-col ">
 
-            <div id="home-content-middle-text-separator" className="flex mt-12 pl-5 text-2xl font-medium">
+            <div id="home-content-middle-text-separator" className="flex mt-12 pl-15 text-2xl font-medium">
                 <h2>Currently Reading</h2>
             </div>
 
-            <div id="home-content-middle-text-animes" className="flex flex-col gap-y-9 justify-around mb-15 pt-15">
+            <div id="home-content-middle-text-animes" className="flex max-w-7xl ml-15 flex-col gap-y-9 justify-around mb-15 pt-15">
 
-                <div id="home-content-middle-text-anime-box-one" className="flex flex-col rounded-lg gap-y-5 border-2 border-gray-500 pb-20 pl-20 pr-20 pt-20 font-mono bg-gray-900">
+                <div id="home-content-middle-text-anime-box-one" className="flex flex-col rounded-lg gap-y-5 border-2 border-gray-500 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
                     <h3>Anime Name</h3>
-                    <h3>Episode</h3>
-                    <h3>Rating</h3>
                 </div>
 
-                <div id="home-content-middle-text-anime-box-two" className="flex flex-col rounded-lg border-2 border-gray-500 pb-20 pl-20 pr-20 pt-20 font-mono bg-gray-900">
+                <div id="home-content-middle-text-anime-box-two" className="flex flex-col rounded-lg border-2 border-gray-500 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
                     <h3>Anime Name</h3>
-                    <h3>Episode</h3>
-                    <h3>Rating</h3>
                 </div>
 
-                <div id="home-content-middle-text-anime-box-three" className="flex flex-col rounded-lg border-2 border-gray-500 pb-20 pl-20 pr-20 pt-20 font-mono bg-gray-900">
+                <div id="home-content-middle-text-anime-box-three" className="flex flex-col rounded-lg border-2 border-gray-500 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
                     <h3>Anime Name</h3>
-                    <h3>Episode</h3>
-                    <h3>Rating</h3>
                 </div>
 
 
@@ -107,6 +101,8 @@ const home =
             </div>
 
         </div>
+
+    </div>
 
     </div>);
 
