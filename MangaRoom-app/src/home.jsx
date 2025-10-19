@@ -30,7 +30,7 @@ const home =
         </div>
     <div className="flex flex-col mr-15 ml-15">
         <div className="flex pl-10">
-            <div id="ReadingSummaryCardDashboard" className="flex flex-col rounded-lg border-2 border-gray-500 bg-gray-900 pl-5.5 pr-5.5 ml-6">
+            <div id="ReadingSummaryCardDashboard" className="flex flex-col rounded-lg border-2 bg-gray-900 pl-5.5 pr-5.5 ml-6">
                 <div className="inline-flex items-center font-medium text-xl gap-2 pt-3 ">
                     <ChartBarSquareIcon className="h-5 w-5 text-blue-500"/>
                     Reading Summary
@@ -51,7 +51,8 @@ const home =
                 </div>
             </div>
 
-            <div id="PacePredictorDashboard" className="gap-y-11 border-2 border-gray-500 bg-gray-900 pl-8 ml-5 pr-51">
+
+            <div id="PacePredictorDashboard" className="gap-y-11 rounded-lg border-2 bg-gray-900 pl-8 ml-5 pr-15">
                 <div className="inline-flex flex-row items-center font-medium text-2xl text-pink-500 gap-2 p-3">
                     <ArrowTrendingUpIcon className="h-5 w-5"/>
                         Pace Predictor Insights
@@ -60,11 +61,27 @@ const home =
                     <h5 className="text-sm text-justify">Based on your average pace of 26 chapters/day, here are your projections:</h5>
                 </div>
                 <div className="inline-flex gap-x-11">
-                    <div className="flex flex-row font-medium text-2xl bg-neutral-800 rounded-lg mt-2 mb-2 pr-26 pl-26">
-                        <h2>Placeholder</h2>
+                    <div className="flex flex-col bg-black rounded-lg mt-2 mb-2 pr-26 p-4">
+                        <div className="block">
+                            <h2 className="font-medium">One Piece (Current arc)</h2>
+                        </div>
+                        <div className="block">
+                            <h2 className="font-medium text-xl">Finish in <span className="text-pink-500">112 Days</span></h2>
+                        </div>
+                        <div className="blockx">
+                            <h2 className="font-medium text-sm">Target: Chapter 1100. Average: 15 ch/day.</h2>
+                        </div>
                     </div>
-                    <div className="flex flex-row font-medium text-2xl bg-neutral-800 rounded-lg mt-2 mb-2 pr-26 pl-26">
-                        <h2>Placeholder</h2>
+                    <div className="flex flex-col bg-black rounded-lg mt-2 mb-2 pr-26 p-4">
+                        <div>
+                            <h2 className="font-medium">Berserk</h2>
+                        </div>
+                        <div>
+                            <h2 className="font-medium text-xl ">Finish in <span className="text-pink-500">38 Days</span></h2>
+                        </div>
+                        <div>
+                            <h2 className="font-medium text-sm">Target: Latest release. Average: 5 ch/day.</h2>
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-row font-medium text-2xl bg-blue-400 rounded-lg p-5 justify-center mt-3 mb-5">
@@ -83,15 +100,15 @@ const home =
 
             <div id="home-content-middle-text-animes" className="flex max-w-7xl ml-15 flex-col gap-y-9 justify-around mb-15 pt-15">
 
-                <div id="home-content-middle-text-anime-box-one" className="flex flex-col rounded-lg gap-y-5 border-2 border-gray-500 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
+                <div id="home-content-middle-text-anime-box-one" className="flex flex-col rounded-lg gap-y-5 border-2 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
                     <h3>Anime Name</h3>
                 </div>
 
-                <div id="home-content-middle-text-anime-box-two" className="flex flex-col rounded-lg border-2 border-gray-500 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
+                <div id="home-content-middle-text-anime-box-two" className="flex flex-col rounded-lg border-2 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
                     <h3>Anime Name</h3>
                 </div>
 
-                <div id="home-content-middle-text-anime-box-three" className="flex flex-col rounded-lg border-2 border-gray-500 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
+                <div id="home-content-middle-text-anime-box-three" className="flex flex-col rounded-lg border-2 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
                     <h3>Anime Name</h3>
                 </div>
 
