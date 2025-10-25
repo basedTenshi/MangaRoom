@@ -1,6 +1,7 @@
 import topHeader from "./header.jsx";
 import {ArrowTrendingUpIcon} from '@heroicons/react/24/solid';
-import {ChartBarSquareIcon} from '@heroicons/react/24/solid'
+import {ChartBarSquareIcon} from '@heroicons/react/24/solid';
+import {ListBulletIcon} from '@heroicons/react/24/solid';
 
 /**
  * Represents the main home UI component for the AnimeHub platform.
@@ -94,22 +95,23 @@ const home =
 
         <div id="home-content-middle-text" className="flex flex-col ">
 
-            <div id="home-content-middle-text-separator" className="flex mt-12 pl-15 text-2xl font-medium">
-                <h2>Currently Reading</h2>
+            <div id="home-content-middle-text-separator" className="flex mt-9 pl-15 text-2xl font-medium">
+                <ListBulletIcon className="h-5 w-5 m-2 text-blue-500"/>
+                <h2>Currently Reading (<span>3</span> Series)</h2>
             </div>
 
-            <div id="home-content-middle-text-animes" className="flex max-w-7xl ml-15 flex-col gap-y-9 justify-around mb-15 pt-15">
+            <div id="home-content-middle-text-animes" className="flex max-w-7xl ml-15 flex-col gap-y-9 justify-around mb-15 pt-6">
 
-                <div id="home-content-middle-text-anime-box-one" className="flex flex-col rounded-lg gap-y-5 border-2 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
-                    <h3>Anime Name</h3>
+                <div id="home-content-middle-text-anime-box-one" className="flex flex-col rounded-lg border-2 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
+                    <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-25"></div>
                 </div>
 
                 <div id="home-content-middle-text-anime-box-two" className="flex flex-col rounded-lg border-2 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
-                    <h3>Anime Name</h3>
+                    <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-25"></div>
                 </div>
 
                 <div id="home-content-middle-text-anime-box-three" className="flex flex-col rounded-lg border-2 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
-                    <h3>Anime Name</h3>
+                    <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-25"></div>
                 </div>
 
 
