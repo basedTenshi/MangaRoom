@@ -15,7 +15,7 @@ const topHeader = (
         </div>
 
         <div className="flex flex-row p-3 ">
-            <input type="text" placeholder="  Search" className="rounded-lg border-2 border-gray-500 pr-50 "/>
+            <input type="text" placeholder="  Search" className="rounded-lg border-2 border-gray-500 pr-50 appearance-none overflow-hidden bg-gray-300 [&::-webkit-input-placeholder]:text-gray-500 [&::-moz-placeholder]:text-gray-500"/>
         </div>
 
         <div className="flex flex-row uppercase font-medium ml-auto">

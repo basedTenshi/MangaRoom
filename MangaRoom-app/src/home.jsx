@@ -69,7 +69,7 @@ const home =
                         <div className="block">
                             <h2 className="font-medium text-xl">Finish in <span className="text-pink-500">112 Days</span></h2>
                         </div>
-                        <div className="blockx">
+                        <div className="block">
                             <h2 className="font-medium text-sm">Target: Chapter 1100. Average: 15 ch/day.</h2>
                         </div>
                     </div>
@@ -102,16 +102,37 @@ const home =
 
             <div id="home-content-middle-text-animes" className="flex max-w-7xl ml-15 flex-col gap-y-9 justify-around mb-15 pt-6">
 
-                <div id="home-content-middle-text-anime-box-one" className="flex flex-col rounded-lg border-2 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
-                    <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-25"></div>
+                <div id="home-content-middle-text-anime-box-one" className="flex flex-col rounded-lg pb-5 pl-3 pt-5 font-mono bg-gray-900">
+                    <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-3">
+                        <h3 className="flex p-4 rounded-t-2xl rounded-b-2xl bg-gray-800">OP</h3>
+                        <div className="flex flex-col ml-3 border-2 pr-155">
+                            <h5 className="mr-auto">One Piece</h5>
+                            <h5>Chapter 1092 of 1100 (Wano Arc)</h5>
+                            <progress value="32" max="100" className="appearance-none rounded-full h-4  overflow-hidden bg-gray-200 [&::-webkit-progress-value]:bg-blue-600 [&::-moz-progress-bar]:bg-blue-600"></progress>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="home-content-middle-text-anime-box-two" className="flex flex-col rounded-lg border-2 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
-                    <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-25"></div>
+                <div id="home-content-middle-text-anime-box-two" className="flex flex-col rounded-lg pb-5 pl-3 pt-5 font-mono bg-gray-900">
+                    <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-3">
+                        <h3 className="flex p-4 rounded-t-2xl rounded-b-2xl bg-gray-800">HxH</h3>
+                        <div className="flex flex-col ml-3 border-2 pr-145">
+                            <h5 className="mr-auto">Hunter x Hunter</h5>
+                            <h5>Chapter 390 of 400 (Succession Arc)</h5>
+                            <progress value="32" max="100" className=" appearance-none rounded-full overflow-hidden bg-gray-200 [&::-webkit-progress-value]:bg-blue-600 [&::-moz-progress-bar]:bg-blue-600"></progress>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="home-content-middle-text-anime-box-three" className="flex flex-col rounded-lg border-2 pb-10 pl-20 pr-20 pt-10 font-mono bg-gray-900">
-                    <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-25"></div>
+                <div id="home-content-middle-text-anime-box-three" className="flex flex-col rounded-lg pb-5 pl-3 pt-5 font-mono bg-gray-900">
+                    <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-3">
+                        <h3 className="flex p-4 rounded-t-2xl rounded-b-2xl bg-gray-800">AOT</h3>
+                        <div className="flex flex-col ml-3 border-2 pr-166">
+                            <h5 className="mr-auto">Attack On Titan</h5>
+                            <h5>Chapter 1 of 110 (Re-reading</h5>
+                            <progress value="32" max="100" className=" appearance-none rounded-full overflow-hidden bg-gray-200 [&::-webkit-progress-value]:bg-blue-600 [&::-moz-progress-bar]:bg-blue-600"></progress>
+                        </div>
+                    </div>
                 </div>
 
 
