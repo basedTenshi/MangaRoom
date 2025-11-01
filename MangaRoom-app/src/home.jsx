@@ -105,10 +105,14 @@ const home =
                 <div id="home-content-middle-text-anime-box-one" className="flex flex-col rounded-lg pb-5 pl-3 pt-5 font-mono bg-gray-900">
                     <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-3">
                         <h3 className="flex p-4 rounded-t-2xl rounded-b-2xl bg-gray-800">OP</h3>
-                        <div className="flex flex-col ml-3 border-2 pr-155">
-                            <h5 className="mr-auto">One Piece</h5>
-                            <h5>Chapter 1092 of 1100 (Wano Arc)</h5>
-                            <progress value="32" max="100" className="appearance-none rounded-full h-4  overflow-hidden bg-gray-200 [&::-webkit-progress-value]:bg-blue-600 [&::-moz-progress-bar]:bg-blue-600"></progress>
+                        <div className="flex flex-col ml-3 pr-auto overflow-hidden">
+                            <h5 className="mr-auto font-['Arial'] font-bold">One Piece</h5>
+                            <h5 className="mr-auto font-['Arial'] text-gray-400 text-sm">Chapter 1092 of 1100 (Wano Arc)</h5>
+                            <progress value="99.3" max="100" className="appearance-none rounded-full h-2 w-5xl overflow-hidden bg-gray-200 [&::-webkit-progress-value]:bg-blue-600 [&::-moz-progress-bar]:bg-blue-600"></progress>
+                        </div>
+                        <div className="flex flex-col ml-auto pr-auto">
+                            <h3>99.3%</h3>
+                            <div className="border-2 rounded-full">AA</div>
                         </div>
                     </div>
                 </div>
@@ -116,10 +120,14 @@ const home =
                 <div id="home-content-middle-text-anime-box-two" className="flex flex-col rounded-lg pb-5 pl-3 pt-5 font-mono bg-gray-900">
                     <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-3">
                         <h3 className="flex p-4 rounded-t-2xl rounded-b-2xl bg-gray-800">HxH</h3>
-                        <div className="flex flex-col ml-3 border-2 pr-145">
-                            <h5 className="mr-auto">Hunter x Hunter</h5>
-                            <h5>Chapter 390 of 400 (Succession Arc)</h5>
-                            <progress value="32" max="100" className=" appearance-none rounded-full overflow-hidden bg-gray-200 [&::-webkit-progress-value]:bg-blue-600 [&::-moz-progress-bar]:bg-blue-600"></progress>
+                        <div className="flex flex-col ml-3 pr-auto overflow-hidden">
+                            <h5 className="mr-auto font-['Arial'] font-bold">Hunter x Hunter</h5>
+                            <h5 className="mr-auto font-['Arial'] text-gray-400 text-sm">Chapter 390 of 400 (Succession Arc)</h5>
+                            <progress value="97.5" max="100" className="appearance-none rounded-full h-2 w-5xl overflow-hidden bg-gray-200 [&::-webkit-progress-value]:bg-blue-600 [&::-moz-progress-bar]:bg-blue-600"></progress>
+                        </div>
+                        <div className="flex flex-col ml-auto pr-auto">
+                            <h3>97.5%</h3>
+                            <div className="border-2 rounded-full">AA</div>
                         </div>
                     </div>
                 </div>
@@ -127,21 +135,19 @@ const home =
                 <div id="home-content-middle-text-anime-box-three" className="flex flex-col rounded-lg pb-5 pl-3 pt-5 font-mono bg-gray-900">
                     <div className="flex border-2 border-gray-500 rounded-lg font-medium text-xl text-center p-5 mr-3">
                         <h3 className="flex p-4 rounded-t-2xl rounded-b-2xl bg-gray-800">AOT</h3>
-                        <div className="flex flex-col ml-3 border-2 pr-166">
-                            <h5 className="mr-auto">Attack On Titan</h5>
-                            <h5>Chapter 1 of 110 (Re-reading</h5>
-                            <progress value="32" max="100" className=" appearance-none rounded-full overflow-hidden bg-gray-200 [&::-webkit-progress-value]:bg-blue-600 [&::-moz-progress-bar]:bg-blue-600"></progress>
+                        <div className="flex flex-col ml-3 pr-auto overflow-hidden">
+                            <h5 className="mr-auto font-['Arial'] font-bold">Attack On Titan</h5>
+                            <h5 className="mr-auto font-['Arial'] text-gray-400 text-sm">Chapter 1 of 110 (Re-reading)</h5>
+                            <progress value="0.7" max="100" className="appearance-none rounded-full h-2 w-5xl overflow-hidden bg-gray-200 [&::-webkit-progress-value]:bg-blue-600 [&::-moz-progress-bar]:bg-blue-600"></progress>
+                        </div>
+                        <div className="flex flex-col ml-auto pr-auto">
+                            <h3>0.7%</h3>
+                            <div className="border-2 rounded-full">AA</div>
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
-
         </div>
-
     </div>
 
     </div>);
