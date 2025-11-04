@@ -11,7 +11,7 @@ const totalMangaTracked = json['tracking']['totalMangaTracked'];
 
 
 // Create a server object
-const serverForJSON = http.createServer(
+const server = http.createServer(
     (req, res) => {
     // Set the response HTTP header with HTTP status and Content type
     res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -23,6 +23,6 @@ const serverForJSON = http.createServer(
 // Define the port to listen on const PORT = 3000;
 
 // Start the server and listen on the specified port
-serverForJSON.listen(3000, 'localhost', () => {
+server.listen(3000, 'localhost', () => {
     console.log(`Server running at http://localhost:${3000}/`);
 });
