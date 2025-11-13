@@ -10,8 +10,12 @@ app.use(express.json());
 
 // req.params, get what's being requested such as "user_id" then pass it as argument to the startDatabase async function and retrieve the promise data
 // through then()
-app.get('/', (req, res) => {
+app.get("/totalMangaTracked", (req, res) => {
     const totalMangaTrackedResponse = startDatabase('manga_count').then(data => {res.send(data)});
+})
+
+app.get("/totalChaptersRead", (req, res) => {
+    const totalChaptersRead = startDatabase('manga_chapters_count').then(data => {res.send(data)})
 })
 
 app.listen(port, () => {
