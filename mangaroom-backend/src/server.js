@@ -8,14 +8,41 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
-// req.params, get what's being requested such as "user_id" then pass it as argument to the startDatabase async function and retrieve the promise data
-// through then()
+// API Endpoints
+// Uses the get method on the app object, which receives the request from the client
+// The main deciding factor for which API Endpoints would be called is the request URL which is the one with "/"
+// After the endpoints receives them, an imported startDatabase function is initialized to retrieve data
+
 app.get("/totalMangaTracked", (req, res) => {
     const totalMangaTrackedResponse = startDatabase('manga_count').then(data => {res.send(data)});
 })
 
 app.get("/totalChaptersRead", (req, res) => {
     const totalChaptersRead = startDatabase('manga_chapters_count').then(data => {res.send(data)})
+})
+
+app.get("/userAveragePace", (req, res) => {
+    const userAveragePace = startDatabase('user_average_pace').then(data => {res.send(data)})
+})
+
+app.get("/paceMangaTitle", (req, res) => {
+    const paceMangaTitle = startDatabase('pace_manga_title').then(data => {res.send(data)})
+})
+
+app.get("/userPredictedFinish", (req, res) => {
+    const userPredictedFinish = startDatabase('user_predicted_finish').then(data => {res.send(data)})
+})
+
+app.get("/userTargetPace", (req, res) => {
+    const userTargetPace = startDatabase('user_target_pace').then(data => {res.send(data)})
+})
+
+app.get("/userPredictedAverage", (req, res) => {
+    const userPredictedAverage = startDatabase('user_predicted_average').then(data => {res.send(data)})
+})
+
+app.get("/userMangaStatus", (req, res) => {
+    const userMangaStatus = startDatabase('user_manga_status').then(data => {res.send(data)})
 })
 
 app.listen(port, () => {

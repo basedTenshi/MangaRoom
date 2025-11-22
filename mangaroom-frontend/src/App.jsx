@@ -1,11 +1,11 @@
-import home from "./home.jsx";
+import home from "./home.jsx" //
 
 function App() {
     return (
-        <div className="App">
+        <div>
             {home}
         </div>
-    );
+    )
 }
 
-export default App;
+export default App
