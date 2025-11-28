@@ -1,8 +1,8 @@
 import { Link, Routes, Route} from "react-router-dom";
-import On_Air from "./on_air.jsx";
+import Library from "./library.jsx";
 import Settings from "./settings.jsx";
-import Profile from "./profile.jsx";
 import home_elem from "./home_elem.jsx";
+import {General, Notifications, Profile, Security} from "./settings.jsx";
 import logo from './LogoMR.png';
 import { HomeIcon, BookOpenIcon, Cog6ToothIcon, UserIcon } from '@heroicons/react/24/outline';
 
@@ -24,7 +24,7 @@ function App() {
                             <HomeIcon className="h-5 w-5" />
                             Home
                         </Link>
-                        <Link to="/on_air" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
+                        <Link to="/library" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
                             <BookOpenIcon className="h-5 w-5" />
                             My Library
                         </Link>
@@ -41,9 +41,12 @@ function App() {
                 </div>
                 <Routes>
                     <Route path="/" element={home_elem}/>
-                    <Route path="/on_air" element={On_Air}/>
+                    <Route path="/library" element={Library}/>
                     <Route path="/settings" element={Settings}/>
-                    <Route path="/profile" element={home_elem}/>
+                    <Route path="/profile" element={<Profile/>}/>
+                    <Route path="/general" element={<General/>}></Route>
+                    <Route path="/notifications" element={<Notifications/>}></Route>
+                    <Route path="/security" element={<Security/>}></Route>
                 </Routes>
         </div>
     )
