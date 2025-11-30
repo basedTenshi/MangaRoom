@@ -42,7 +42,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={home_elem}/>
                     <Route path="/library" element={Library}/>
-                    <Route path="/settings" element={Settings}/>
+                    <Route path="/settings" element={<General/>}/>
                     <Route path="/profile" element={<Profile/>}/>
                     <Route path="/general" element={<General/>}></Route>
                     <Route path="/notifications" element={<Notifications/>}></Route>
