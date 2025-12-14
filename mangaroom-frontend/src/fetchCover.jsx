@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // In React, functions that fetch and return data are called "Hooks"
 // and must start with "use"
-export function useMangaId() {
+export function UseMangaId() {
     const [mangaId, setMangaId] = useState(null);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ export function useMangaId() {
     return mangaId;
 }
 
-export function useCoverFileName() {
+export function UseCoverFileName() {
     const [fileName, setFileName] = useState(null);
 
     useEffect(() => {
@@ -34,8 +34,8 @@ export function useCoverFileName() {
 
 export function MangaDisplay() {
     // 1. Call your custom functions
-    const id = useMangaId();
-    const file = useCoverFileName();
+    const id = UseMangaId();
+    const file = UseCoverFileName();
 
     // 2. Wait until both have arrived
     if (!id || !file) return <p>Loading...</p>;
@@ -44,6 +44,7 @@ export function MangaDisplay() {
     const url = `https://uploads.mangadex.org/covers/${id}/${file}`;
 
     return (
-        <img src={url} alt="Manga Cover" className="w-[183.2px] h-[283.2px] border-2 rounded-lg border-whitebg-gray-950 object-cover"/>
+        <img src={url} alt="Manga Cover" className="w-[183.2px] h-[auto] border-2 rounded-lg border-whitebg-gray-950 object-cover"/>
     );
 }
+

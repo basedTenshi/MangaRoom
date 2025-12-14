@@ -45,6 +45,30 @@ app.get("/userMangaStatus", (req, res) => {
     const userMangaStatus = startDatabase('user_manga_status').then(data => {res.send(data)})
 })
 
+
+app.post("/startSession", (req, res) => {
+    const getSessionConfirmation = req.body["Logged In"];
+    let sessionConfirmation = false;
+
+    if (getSessionConfirmation === "Yes") {
+        sessionConfirmation = true;
+    } else (
+        res.status(401)
+    )
+
+    if (sessionConfirmation === true) {
+        res.status(200).json(
+            {"access": true, "message": "Log-in successful!" }
+        )
+    }
+    else {
+        res.status(401).json(
+            {"access": false, "message": "Please log-in first!" }
+        )
+    }
+})
+
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })

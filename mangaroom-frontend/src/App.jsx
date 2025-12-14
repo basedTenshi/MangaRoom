@@ -1,44 +1,58 @@
 import { Link, Routes, Route} from "react-router-dom";
+import { useState, useEffect } from 'react';
 import Library from "./library.jsx";
 import Settings from "./settings.jsx";
 import home_elem from "./home_elem.jsx";
 import {General, Notifications, Profile, Security} from "./settings.jsx";
 import logo from './LogoMR.png';
 import { HomeIcon, BookOpenIcon, Cog6ToothIcon, UserIcon } from '@heroicons/react/24/outline';
+import {ListBulletIcon, MagnifyingGlassIcon } from "@heroicons/react/24/solid/index.js";
 
-function App() {
-    return (
-            <div className="text-white bg-slate-950">
-                <div className="text-white flex flex-row sticky top-0 justify-between items-center bg-gray-900 border-b-2 border-gray-700 h-16 w-full">
-                    <div className="p-3">
-                        <picture>
-                            <source srcSet={logo} type="image/webp" />
-                            <img src={logo} alt="MangaRoom Logo" width="55px"/>
-                        </picture>
+export function App() {
+        return (
+            <div className="text-white bg-[#0A0A0A]">
+                <nav className="w-full border-b border-gray-800/50 bg-[#181818]/40 backdrop-blur-md sticky top-0 z-50">
+                    <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+
+                        {/* Left: Logo */}
+                        <div className="flex items-center gap-3">
+                            <div className="p-2 bg-gray-800 rounded-lg border border-gray-700">
+                            </div>
+                            <span className="text-xl font-bold tracking-tight">MangaRoom</span>
+                        </div>
+
+                        {/* Center: Links (Hidden on mobile) */}
+                        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                            <Link to="/" className="hover:text-white transition-colors">Features</Link>
+                            <Link to="/library" className="hover:text-white transition-colors">Library</Link>
+                            <Link to="/settings" className="hover:text-white transition-colors">Settings</Link>
+                        </div>
+
+                        {/* Right: Search + Action Button */}
+                        <div className="flex items-center gap-4">
+
+                            {/* Search Bar - Hidden on very small screens, visible on md+ */}
+                            <div className="hidden md:block relative">
+                                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <MagnifyingGlassIcon className="h-4 w-4 text-gray-500" />
+                                </div>
+                                <input
+                                    type="text"
+                                    placeholder="Search manga..."
+                                    className="w-48 lg:w-64 bg-[#0F1523] border border-gray-700 text-gray-300 text-sm rounded-lg pl-9 pr-3 py-1.5 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-gray-600"
+                                />
+                            </div>
+
+                            <button
+                                onClick={() => setIsLogin(true)}
+                                className="px-4 py-2 text-sm font-medium text-white bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-700 transition-all"
+                            >
+                                Sign In
+                            </button>
+                        </div>
                     </div>
-                    <div className="flex flex-row p-3 ">
-                        <input type="text" placeholder="  Search" className="rounded-lg border-2 border-gray-500 pr-50 appearance-none overflow-hidden bg-gray-300 [&::-webkit-input-placeholder]:text-gray-500 [&::-moz-placeholder]:text-gray-500"/>
-                    </div>
-                    <div className="flex flex-row uppercase font-medium ml-auto">
-                        <Link to="/" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
-                            <HomeIcon className="h-5 w-5" />
-                            Home
-                        </Link>
-                        <Link to="/library" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
-                            <BookOpenIcon className="h-5 w-5" />
-                            My Library
-                        </Link>
-                        <Link to="/settings" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
-                            <Cog6ToothIcon className="h-5 w-5" />
-                            Settings
-                        </Link>
-                        <Link to="/profile" className="inline-flex items-center gap-2 p-3 hover:text-blue-400">
-                        <span className="rounded-full bg-blue-500 p-2">
-                            <h3>P</h3>
-                        </span>
-                        </Link>
-                    </div>
-                </div>
+                </nav>
+
                 <Routes>
                     <Route path="/" element={home_elem}/>
                     <Route path="/library" element={Library}/>
@@ -48,8 +62,8 @@ function App() {
                     <Route path="/notifications" element={<Notifications/>}></Route>
                     <Route path="/security" element={<Security/>}></Route>
                 </Routes>
-        </div>
-    )
+            </div>
+        )
 }
 
 export default App
