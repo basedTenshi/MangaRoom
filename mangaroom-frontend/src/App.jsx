@@ -4,6 +4,7 @@ import Library from "./library.jsx";
 import Settings from "./settings.jsx";
 import home_elem from "./home_elem.jsx";
 import {General, Notifications, Profile, Security} from "./settings.jsx";
+import { LandingPage } from "./landingpage.jsx";
 import logo from './LogoMR.png';
 import { HomeIcon, BookOpenIcon, Cog6ToothIcon, UserIcon } from '@heroicons/react/24/outline';
 import {ListBulletIcon, MagnifyingGlassIcon } from "@heroicons/react/24/solid/index.js";
@@ -36,18 +37,10 @@ export function App() {
                                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <MagnifyingGlassIcon className="h-4 w-4 text-gray-500" />
                                 </div>
-                                <input
-                                    type="text"
-                                    placeholder="Search manga..."
-                                    className="w-48 lg:w-64 bg-[#0F1523] border border-gray-700 text-gray-300 text-sm rounded-lg pl-9 pr-3 py-1.5 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-gray-600"
-                                />
+                                <input type="text" placeholder="Search manga..." className="w-48 lg:w-64 bg-[#0F1523] border border-gray-700 text-gray-300 text-sm rounded-lg pl-9 pr-3 py-1.5 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-gray-600"/>
                             </div>
-
-                            <button
-                                onClick={() => setIsLogin(true)}
-                                className="px-4 py-2 text-sm font-medium text-white bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-700 transition-all"
-                            >
-                                Sign In
+                            <button className="px-4 py-2 text-sm font-medium text-white bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-700 transition-all">
+                                Log Out
                             </button>
                         </div>
                     </div>
@@ -64,6 +57,7 @@ export function App() {
                 </Routes>
             </div>
         )
+
 }
 
 export default App
