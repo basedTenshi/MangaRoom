@@ -11,7 +11,15 @@
   },
   "dependencies": {
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "@heroicons/react": "^2.2.0",
+    "@preact/signals-react": "^3.6.1",
+    "@tailwindcss/vite": "^4.1.13",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3",
+    "react-router-dom": "^7.9.6",
+    "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
