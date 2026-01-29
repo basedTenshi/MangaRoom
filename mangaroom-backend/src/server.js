@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import startDatabase from './database.js';
+import { startDatabase} from './database.js';
+
 
 const app = express();
 const port = 3000;
@@ -46,26 +47,52 @@ app.get("/userMangaStatus", (req, res) => {
 })
 
 
-app.post("/startSession", (req, res) => {
-    const getSessionConfirmation = req.body["Logged In"];
-    let sessionConfirmation = false;
+app.post("/startSession", async(req, res) => {
+    const getEmail = req.body.Email;
+    const getPass = req.body.Password;
+    let sessionConfirmation;
 
-    if (getSessionConfirmation === "Yes") {
-        sessionConfirmation = true;
-    } else (
-        res.status(401)
-    )
 
-    if (sessionConfirmation === true) {
-        res.status(200).json(
-            {"access": true, "message": "Log-in successful!" }
-        )
+    async function initChecking() {
+        const checkAccount = await startDatabase('user_information', getEmail, getPass)
+
+        const accountExists =
+            {
+                "Entered Email": getEmail,
+                "Entered Password": getPass,
+                "Checked Email": checkAccount['email'],
+                "Checked Password": checkAccount['password']
+            }
+
+        if (accountExists["Checked Email"] === accountExists["Entered Email"] && accountExists["Checked Password"] === accountExists["Entered Password"]) {
+            sessionConfirmation = true
+        }
+        else {
+            sessionConfirmation = false
+        }
+
+        if (sessionConfirmation === true) {
+            res.status(200).json(
+                {"access": true, "message": "Log-in successful!" }
+            )
+        }
+        else {
+            res.status(401).json(
+                {"access": false, "message": "Something went wrong"}
+            )
+        }
     }
-    else {
-        res.status(401).json(
-            {"access": false, "message": "Please log-in first!" }
-        )
-    }
+
+    await initChecking()
+
+})
+
+app.post("/signUpAccount", async(req) => {
+    const getUsername = req.body.Username;
+    const getEmail = req.body.Email;
+    const getPassword = req.body.Password;
+
+    const createAccount = await startDatabase('sign_up', getUsername, getEmail, getPassword);
 })
 
 

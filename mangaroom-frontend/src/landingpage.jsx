@@ -1,36 +1,61 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState} from 'react';
 // Using the specific imports you requested
 import { ArrowTrendingUpIcon, ChartBarSquareIcon, ListBulletIcon, StarIcon } from '@heroicons/react/24/solid';
-import {Link, Route, Routes} from "react-router-dom";
-import {MagnifyingGlassIcon} from "@heroicons/react/24/solid/index.js";
-import home_elem from "./home_elem.jsx";
-import Library from "./library.jsx";
-import {General, Notifications, Profile, Security} from "./settings.jsx";
-import app from "./App.jsx";
 import { App } from "./App.jsx";
-import { signal } from "@preact/signals-react";
 
 
 export function LandingPage() {
     const [isLogin, setIsLogin] = useState(true);
     const [sessionActive, setSessionActive] = useState(false);
-    const [cantLogin, setCantLogin] = useState(null);
+    const [cantLogin, setCantLogin] = useState(false);
     const [closeDialog, setCloseDialog] = useState(false);
 
-    function SignInHandler(email, pass) {
-        fetch('http://localhost:3000/startSession', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({'Logged In': 'Yes'})
-        })
-            .then(res => res.json())
-            .then(data => {
-                // 2. Update the signal directly
-                // Any component listening to this signal will auto-update
-                setSessionActive(data['access']);
+    function SignInHandler(event) {
+        let body = {}
+
+
+        try {
+            body = {
+                'Username': `${event.currentTarget.elements.userName.value}`,
+                'Email': `${event.currentTarget.elements.userEmail.value}`,
+                'Password': `${event.currentTarget.elements.userPassword.value}`
+            }
+
+            fetch('http://localhost:3000/signUpAccount', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            }).then(res => res.json())
+                .then(data => {console.log(data)})
+
+        } catch (error) {
+            body = {
+                'Email': `${event.currentTarget.elements.userEmail.value}`,
+                'Password': `${event.currentTarget.elements.userPassword.value}`
+            }
+            fetch('http://localhost:3000/startSession', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body),
             })
-            .catch(err => setCantLogin(false));
-            setCloseDialog(false);
+                .then(res => res.json())
+                .then(data => {
+                    // 2. Update the signal directly
+                    // Any component listening to this signal will auto-update
+                    setSessionActive(data['access']);
+
+                    if (data['access'] === false) {
+                        setCloseDialog(false)
+                        setCantLogin(true)
+                    console.log(data)
+                    }
+                })
+                .catch(err => {setCloseDialog(false);setCantLogin(true);});
+        }
+
+        console.log(body)
+
+
     }
 
     function closeDialogHandler() {
@@ -90,20 +115,20 @@ export function LandingPage() {
                                     </p>
                                 </div>
 
-                                <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); SignInHandler(); }}>
+                                <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); SignInHandler(e);}}>
                                     {!isLogin && (
                                         <div>
                                             <label className="block text-xs font-semibold text-gray-400 mb-1 uppercase">Username</label>
-                                            <input type="text" className="w-full bg-[#050B14] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-gray-600" placeholder="OtakuKing99" />
+                                            <input type="text" name="userName" className="w-full bg-[#050B14] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-gray-600" placeholder="OtakuKing99" />
                                         </div>
                                     )}
                                     <div>
                                         <label className="block text-xs font-semibold text-gray-400 mb-1 uppercase">Email</label>
-                                        <input type="email" className="w-full bg-[#050B14] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-gray-600" placeholder="you@example.com" />
+                                        <input type="email" name="userEmail" className="w-full bg-[#050B14] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-gray-600" placeholder="you@example.com" />
                                     </div>
                                     <div>
                                         <label className="block text-xs font-semibold text-gray-400 mb-1 uppercase">Password</label>
-                                        <input type="password" className="w-full bg-[#050B14] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-gray-600" placeholder="••••••••" />
+                                        <input type="password" name="userPassword" className="w-full bg-[#050B14] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-gray-600" placeholder="••••••••" />
                                     </div>
                                     <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2 mt-2">
                                         {isLogin ? 'Sign In' : 'Create Account'}
@@ -136,7 +161,7 @@ export function LandingPage() {
                 </div>
 
                 {/* --- THE DIALOG BOX (Conditionally Rendered) --- */}
-                {cantLogin === false &&  closeDialog === false && (
+                {cantLogin === true && closeDialog === false && (
                     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
                         <div className="w-80 rounded-2xl border border-[#1f2937] bg-[#0F1523] p-6 text-white shadow-2xl">
                             <h2 className="text-xl font-bold">Log-in Error</h2>
