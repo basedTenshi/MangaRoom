@@ -9,7 +9,6 @@ export function LandingPage() {
     const [sessionActive, setSessionActive] = useState(false);
     const [cantLogin, setCantLogin] = useState(false);
     const [closeDialog, setCloseDialog] = useState(false);
-    const [successfullySignedUp, setSuccessfullySignedUp] = useState(false);
 
     function SignInHandler(event) {
         let body = {}
@@ -27,12 +26,7 @@ export function LandingPage() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body)
             }).then(res => res.json())
-                .then(data => {
-                    if (data['affectedRows'] === 1) {
-                        setSuccessfullySignedUp(true)
-                        event.target.reset();
-                    }
-                })
+                .then(data => {console.log(data)})
 
         } catch (error) {
             body = {
