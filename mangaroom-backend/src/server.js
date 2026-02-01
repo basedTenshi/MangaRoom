@@ -78,7 +78,7 @@ app.post("/startSession", async(req, res) => {
         }
         else {
             res.status(401).json(
-                {"access": false, "message": "Something went wrong"}
+                {"access": false, "message": checkAccount}
             )
         }
     }
@@ -87,12 +87,15 @@ app.post("/startSession", async(req, res) => {
 
 })
 
-app.post("/signUpAccount", async(req) => {
+app.post("/signUpAccount", async(req, res) => {
     const getUsername = req.body.Username;
     const getEmail = req.body.Email;
     const getPassword = req.body.Password;
 
     const createAccount = await startDatabase('sign_up', getUsername, getEmail, getPassword);
+
+
+    res.json(createAccount[0])
 })
 
 
